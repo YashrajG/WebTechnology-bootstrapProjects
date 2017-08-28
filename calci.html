@@ -2,11 +2,10 @@
 	<HEAD>
 		<title>Calculator</title>
 		<SCRIPT>
-			fnadd()
+			document.getElementsByClassName("number").addEventListener("click",appendDigit(this.innerHTML));
+			function appendDigit()
 			{
-				var n1=parseInt(document.getElementById("no1").value);
-				var n2=parseInt(document.getElementById("no2").value);
-				document.getElementById("ANS").innerHTML=n1+n2;	
+				document.getElementById("disp").innerHTML="123";	
 			}
 		</SCRIPT>
 		<STYLE>
@@ -45,17 +44,17 @@
 	</HEAD>
 	<BODY>
 		<div style="position:absolute;left:50px;top:50px;height:175px;width:160px">
-			<input type=text id="disp" name="display" style="position:absolute;left:5px;top:10px;width:150px">
-			<button id="btn1" class="top left">1</button>
-			<button id="btn2" class="top midleft">2</button>
-			<button id="btn3" class="top midright">3</button>
-			<button id="btn4" class="rtwo left">4</button>
-			<button id="btn5" class="rtwo midleft">5</button>
-			<button id="btn6" class="rtwo midright">6</button>
-			<button id="btn7" class="rthree left">7</button>
-			<button id="btn8" class="rthree midleft">8</button>
-			<button id="btn9" class="rthree midright">9</button>
-			<button id="btn0" class="bottom left">0</button>
+			<input type=text id="disp" name="display" style="position:absolute;left:5px;top:10px;width:150px" >
+			<button id="btn1" class="number top left">1</button>
+			<button id="btn2" class="number top midleft">2</button>
+			<button id="btn3" class="number top midright">3</button>
+			<button id="btn4" class="number rtwo left">4</button>
+			<button id="btn5" class="number rtwo midleft">5</button>
+			<button id="btn6" class="number rtwo midright">6</button>
+			<button id="btn7" class="number rthree left">7</button>
+			<button id="btn8" class="number rthree midleft">8</button>
+			<button id="btn9" class="number rthree midright">9</button>
+			<button id="btn0" class="number bottom left">0</button>
 			<button id="btnadd" class="top right">+</button>
 			<button id="btnsub" class="rtwo right">-</button>
 			<button id="btnmul" class="bottom midleft">*</button>
