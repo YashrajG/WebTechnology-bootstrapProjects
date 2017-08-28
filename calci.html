@@ -1,0 +1,68 @@
+<HTML>
+	<HEAD>
+		<title>Calculator</title>
+		<SCRIPT>
+			fnadd()
+			{
+				var n1=parseInt(document.getElementById("no1").value);
+				var n2=parseInt(document.getElementById("no2").value);
+				document.getElementById("ANS").innerHTML=n1+n2;	
+			}
+		</SCRIPT>
+		<STYLE>
+			div{
+				background-color:green;
+				}
+			button{
+				position:absolute;
+				width:31px;
+				}
+			.top{
+					top:40px;
+				}
+			.rtwo{
+					top:70px;
+				}
+			.rthree{
+					top:100px;
+					}
+			.bottom{
+					top:130px;
+					}
+			.left{
+					left:10px;
+					}
+			.midleft{
+					left:46px;
+					}
+			.midright{
+						right:46px;
+					}
+			.right{
+					right:10px;
+					}
+		</STYLE>
+	</HEAD>
+	<BODY>
+		<div style="position:absolute;left:50px;top:50px;height:175px;width:160px">
+			<input type=text id="disp" name="display" style="position:absolute;left:5px;top:10px;width:150px">
+			<button id="btn1" class="top left">1</button>
+			<button id="btn2" class="top midleft">2</button>
+			<button id="btn3" class="top midright">3</button>
+			<button id="btn4" class="rtwo left">4</button>
+			<button id="btn5" class="rtwo midleft">5</button>
+			<button id="btn6" class="rtwo midright">6</button>
+			<button id="btn7" class="rthree left">7</button>
+			<button id="btn8" class="rthree midleft">8</button>
+			<button id="btn9" class="rthree midright">9</button>
+			<button id="btn0" class="bottom left">0</button>
+			<button id="btnadd" class="top right">+</button>
+			<button id="btnsub" class="rtwo right">-</button>
+			<button id="btnmul" class="bottom midleft">*</button>
+			<button id="btndiv" class="rthree right">/</button>
+			<button id="btneq" class="bottom midright">=</button>
+			<button id="btncc" class="bottom right">C</button>
+		</div>
+		
+	</BODY>
+</HTML>
