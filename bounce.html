@@ -1,0 +1,41 @@
+<HTML>
+	<HEAD>
+		<TITLE>BOUNCE</TITLE>
+		<SCRIPT TYPE="TEXT/JAVASCRIPT">
+			var distanceBall=0;
+			var directionBall=2;
+			var timerToggle=null;
+			
+		function animateBall()
+		{
+			document.getElementById("BASKETBALL").style.top=distanceBall+"px";
+			distanceBall+=directionBall;
+			if(distanceBall>200)
+				directionBall=-2;
+			if(0>distanceBall)
+				directionBall=+2;	
+			
+			timerToggle=setTimeout(function(){animateBall();},1);
+		}
+		function checkButton()
+		{
+			if(document.getElementById("BALLBUTTON").value == "BOUNCE")
+			{
+				document.getElementById("BALLBUTTON").value = "STOP"
+				animateBall();
+			}
+			else
+			{
+				document.getElementById("BALLBUTTON").value = "BOUNCE"
+				clearTimeout(timerToggle);
+			}	
+		}	
+		</SCRIPT>
+	</HEAD>
+	<BODY>
+		<INPUT TYPE="BUTTON" VALUE="BOUNCE" ID="BALLBUTTON" ONCLICK="checkButton()">
+		<DIV ID="BASKETBALL" STYLE="POSITION: RELATIVE" >
+			<IMG SRC="ball.png" ALT="BASKETBALL" HEIGHT="50PX" WIDTH="50PX">
+		</DIV>
+	</BODY>
+</HTML>
