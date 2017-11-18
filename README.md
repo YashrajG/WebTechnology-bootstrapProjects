@@ -1,5 +1,5 @@
 # Web-Technology
-All web tech stuff of Yashraj Gangal and Aditya Gala
+All web tech stuff of Semester 4
 
 Index:
 
